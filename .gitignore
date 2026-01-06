@@ -1,0 +1,5 @@
+.env
+client_secret_452272260756-7ifokpmp1gtk3s42rdoo6q2p8m3hdafa.apps.googleusercontent.com.json
+
+backend/.env
+client_secret_*.json
