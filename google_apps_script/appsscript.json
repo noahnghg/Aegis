@@ -1,0 +1,27 @@
+{
+    "timeZone": "America/Los_Angeles",
+    "dependencies": {},
+    "exceptionLogging": "STACKDRIVER",
+    "oauthScopes": [
+        "https://www.googleapis.com/auth/calendar.addons.execute",
+        "https://www.googleapis.com/auth/script.external_request",
+        "https://www.googleapis.com/auth/calendar.readonly"
+    ],
+    "runtimeVersion": "V8",
+    "addOns": {
+        "common": {
+            "name": "Aegis LifeOS",
+            "logoUrl": "https://www.gstatic.com/images/branding/product/1x/calendar_48dp.png",
+            "layoutProperties": {
+                "primaryColor": "#4285F4",
+                "secondaryColor": "#34A853"
+            }
+        },
+        "calendar": {
+            "homepageTrigger": {
+                "runFunction": "onHomepageTrigger",
+                "enabled": true
+            }
+        }
+    }
+}

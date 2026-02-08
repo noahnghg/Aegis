@@ -24,7 +24,13 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_origins=[
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+        "https://script.google.com",
+        "https://script.googleusercontent.com",
+    ],
+    allow_origin_regex='https://.*\.googleusercontent\.com',
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
