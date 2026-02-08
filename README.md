@@ -12,6 +12,21 @@ Aegis LifeOS is an intelligent agent system designed to plan and schedule learni
 
 ## Architecture
 
+```mermaid
+graph LR
+    User([User]) -->|Inputs| Client[Client<br>Frontend/GAS]
+    Client -->|API Request| Orchestrator{Orchestrator<br>Agent}
+    
+    Orchestrator -->|Intent: Learn| Planner[Planner Agent]
+    Orchestrator -->|Intent: Schedule| Scheduler[Scheduler Agent]
+    
+    Planner -->|RAG| KB[(Knowledge Base)]
+    Scheduler -->|Manage| GCal[Google Calendar]
+    
+    KB -->|Context| Planner
+    GCal -->|Availability| Scheduler
+```
+
 The system consists of two main components:
 1.  **Frontend/Client**:
     - Next.js web application for chat and visualization.
