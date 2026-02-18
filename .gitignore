@@ -1,5 +1,23 @@
+# Environment
 .env
-client_secret_452272260756-7ifokpmp1gtk3s42rdoo6q2p8m3hdafa.apps.googleusercontent.com.json
-
 backend/.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Backend
+temp_uploads/
+credentials.json
+token.json
 client_secret_*.json
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
